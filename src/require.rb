@@ -1,7 +1,7 @@
 def require_all_packages
 
-  directory = "#{Dir.pwd}/src/packages"
-  files = Dir.entries directory
+  packages_directory = "#{File.dirname(__FILE__)}/packages"
+  files = Dir.entries packages_directory
 
   files.each do |file|
     if file.include? ".rb"
