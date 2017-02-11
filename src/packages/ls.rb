@@ -1,4 +1,3 @@
 def ls
-  directory = "#{Dir.pwd}/src/packages"
-  puts Dir.entries(directory)
+  puts Dir.entries(Dir.pwd)
 end

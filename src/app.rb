@@ -11,11 +11,7 @@ command_count = 0
 loop do
   print "0.0.1 :#{command_count} > "
   command = gets.gsub("\n", "").to_sym
-  if defined? command
-    send(command)
-  else
-    puts "No command \'#{command}\' found."
-  end
+  send command
   command_count += 1
   break if exit_condition? command
 end
