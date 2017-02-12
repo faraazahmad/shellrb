@@ -1,0 +1,14 @@
+GEM
+  specs:
+    colorize (0.8.1)
+    psych (2.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorize
+  psych
+
+BUNDLED WITH
+   1.13.7
