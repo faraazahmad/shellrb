@@ -4,12 +4,20 @@ class Ls
 
   def self.main(params)
     if params.length == 0
-      show_non_hidden
+      result = show_non_hidden
     else
       case params[0]
       when "-a"
-        show_non_hidden.merge show_hidden
+        result = show_non_hidden.merge show_hidden
       end
+    end
+
+    print_result(result)
+  end
+
+  def self.print_result(result)
+    result.each do |entry|
+      puts entry
     end
   end
 

@@ -4,7 +4,7 @@ require_all_packages
 def handle_commands(command, params)
   if Object.const_defined?(command)
     c = Object.const_get(command)
-    puts c.send(:main, params)
+    c.send(:main, params)
   else
     puts "Command \'#{command}\' not found"
   end
