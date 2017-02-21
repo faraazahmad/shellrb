@@ -1,7 +1,7 @@
 require 'colorize'
 
 def display_prompt
-  print "SRB ".yellow
+  print "\nSRB ".yellow
   print "#{Dir.pwd}".blue
   print "> "
 end

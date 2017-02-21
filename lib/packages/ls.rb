@@ -1,27 +1,34 @@
+require "set"
+
 class Ls
 
-  def initialize(params)
+  def self.main(params)
     if params.length == 0
       show_non_hidden
     else
       case params[0]
-        when "-a"
-          show_all
+      when "-a"
+        show_non_hidden.merge show_hidden
       end
     end
   end
 
-  def show_all
+  def self.show_hidden
+    hidden_files = Set.new
+
     Dir.entries(Dir.pwd).each do |entry|
-      print "#{entry}\t"
+      hidden_files.add entry if entry[0] == "."
     end
-    print "\n"
+    hidden_files
   end
 
-  def show_non_hidden
+  def self.show_non_hidden
+    non_hidden = Set.new
+
     Dir.entries(Dir.pwd).each do |entry|
-      print "#{entry}\t" unless entry[0] == "."
+      non_hidden.add entry unless entry[0] == "."
     end
+    non_hidden
   end
 
 end
