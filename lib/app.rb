@@ -6,7 +6,7 @@ def handle_commands(command, params)
     c = Object.const_get(command)
     c.send(:main, params)
   else
-    puts "Command \'#{command}\' not found"
+    puts "Command \'#{command.downcase}\' not found"
   end
 end
 

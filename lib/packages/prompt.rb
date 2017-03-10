@@ -1,7 +1,7 @@
-require 'colorize'
+require 'colorized_string'
 
 def display_prompt
-  print "\nSRB ".yellow
-  print "#{Dir.pwd}".blue
+  print ColorizedString["SRB "].colorize(:yellow)
+  print ColorizedString["#{Dir.pwd}"].colorize(:blue)
   print "> "
 end

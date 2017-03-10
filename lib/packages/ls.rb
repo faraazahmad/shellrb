@@ -3,12 +3,16 @@ require "set"
 class Ls
 
   def self.main(params)
+    result = Set.new
+
     if params.length == 0
       result = show_non_hidden
     else
       case params[0]
       when "-a"
         result = show_non_hidden.merge show_hidden
+      else
+        result.add "#{self.name.downcase}: Unknown argument \'#{params[0]}\'"
       end
     end
 
