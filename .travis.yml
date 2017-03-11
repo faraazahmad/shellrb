@@ -3,9 +3,12 @@ rvm:
     - 2.2.0
     - 2.1.0
     - 2.0.0
+    - 1.9.3
+    - 1.9.2
 script:
     - bundle exec rspec
 
 os:
     - linux
     - osx
+    - windows
