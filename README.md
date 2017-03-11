@@ -1,6 +1,7 @@
 # ShellRB - Unix shell commands using Ruby
-[![Build Status](https://travis-ci.org/faraazahmad/shellrb.svg?branch=master)](https://travis-ci.org/faraazahmad/shellrb)
 
+master [![Build Status](https://travis-ci.org/faraazahmad/shellrb.svg?branch=master)](https://travis-ci.org/faraazahmad/shellrb)
+dev [![Build Status](https://travis-ci.org/faraazahmad/shellrb.svg?branch=dev)](https://travis-ci.org/faraazahmad/shellrb)
 
 ShellRB is a portable **(Windows/Linux/OS X)** implementation of Unix shell commands on top of the Ruby's modules. You can use it to eliminate your shell script's dependency on Unix while still keeping its familiar and powerful commands.
 
