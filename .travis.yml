@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+    - 2.2.0
+    - 2.1.x
+script:
+    - bundle exec rspec
+
+os:
+    - linux
+    - osx

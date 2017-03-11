@@ -2,4 +2,7 @@ source 'https://rubygems.org'
 
 gem 'psych'
 gem 'colorize'
-gem 'rspec'
+
+group :test, :development do
+  gem 'rspec'
+end
