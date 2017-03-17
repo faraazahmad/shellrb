@@ -38,7 +38,7 @@ and do not forget the Bundler gem.
 #### On Linux/Mac OS
 Clone the repository using git and cd into it.
 ```
-git clone https://github.com/faraazhmad/shellrb.git
+git clone https://github.com/faraazahmad/shellrb.git
 cd shellrb/
 ```
 Install the required gems using bundler
