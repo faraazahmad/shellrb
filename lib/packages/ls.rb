@@ -1,8 +1,9 @@
 require "set"
+require_relative "core"
 
 class Ls
 
-  def self.main(params)
+  def self.main params
     result = Set.new
 
     if params.length == 0
@@ -16,13 +17,7 @@ class Ls
       end
     end
 
-    print_result(result)
-  end
-
-  def self.print_result(result)
-    result.each do |entry|
-      puts entry
-    end
+    Core.print_result result
   end
 
   def self.show_hidden

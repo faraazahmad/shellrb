@@ -7,12 +7,10 @@ class Sys
     result = Set.new
 
     case params[0]
-    when "--exit", "-e"
-      exit
     when "--info", "-i"
       result = info
     end
-    Core.print_result(result)
+    Core.print_result result
   end
 
   def self.info
