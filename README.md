@@ -50,6 +50,9 @@ ShellRB is now installed. You can now run it using
 ruby lib/app.rb
 ```
 
+## Contributing
+The commands in ShellRB are made available using packages containing a class of their name. The packages can be found in "lib/packages/" directory. The packages in the directory are automatically ```require```ed in the app. When adding a package, make sure to also add tests for it, with the maximum code coverage. We believe in Behaviour Driven Development.
+
 ## Cheat Sheet
 Currently, commands like ```cd```, ```ls``` etc. are packages built using classes, whose objects return a Ruby Set, which is then printed to the console. The following commands have a working class right now:
 * cd
