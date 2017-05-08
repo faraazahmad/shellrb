@@ -20,4 +20,13 @@ class Core
 
   end
 
+  def self.handle_commands command, params
+    if Object.const_defined?(command)
+      c = Object.const_get(command)
+      c.send(:main, params)
+    else
+      puts "Command \'#{command.downcase}\' not found"
+    end
+  end
+  
 end
