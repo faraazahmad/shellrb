@@ -11,4 +11,14 @@ describe Cd do
     end
   end
 
+=begin
+  describe ".path_exists?" do
+    context "given a path" do
+      it "checks for path validity" do
+        
+      end
+    end
+  end
+=end
+  
 end

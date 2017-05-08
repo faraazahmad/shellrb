@@ -2,7 +2,7 @@ require_relative "require"
 require_all_packages
 
 loop do
-  display_prompt
+  Display.display_prompt
   input = gets.gsub("\n", "").split(" ")
     if input[0] != ""
       command = input[0].capitalize.to_sym

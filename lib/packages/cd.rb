@@ -32,8 +32,8 @@ class Cd
           exists = false
           break
         end
-        return exists
       end
+      return exists
     end
 
 end

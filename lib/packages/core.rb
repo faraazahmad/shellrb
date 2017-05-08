@@ -1,3 +1,5 @@
+require_relative "display"
+
 class Core
 
   def self.main params
@@ -25,7 +27,8 @@ class Core
       c = Object.const_get(command)
       c.send(:main, params)
     else
-      puts "Command \'#{command.downcase}\' not found"
+      error = "Command \'#{command.downcase}\' not found"
+      Display.print_error error
     end
   end
   
