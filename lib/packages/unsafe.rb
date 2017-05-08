@@ -1,4 +1,4 @@
-# This is class is a temporary replacement
+# This class is a temporary replacement
 # for running native shell commands. the
 # safety of commands run using this class
 # is not guarenteed by ShellRB. So use it 
