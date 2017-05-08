@@ -7,7 +7,7 @@ class Cd
     path = params[0]
 
     if path_exists? path
-      # automatically cds into the path and checks for valid path
+      # automatically checks for valid path and cds into it
     else
       result = Set.new
       result.add "#{self.name.downcase}: specified Path does not exist"
@@ -19,13 +19,21 @@ class Cd
   def self.path_exists? target_path
     current_path = Dir.pwd
     target_path = target_path.split "/"
-    
-    unless target_path[0] == ""
-      if Dir.entries(Dir.pwd).include? target_path[0]
-        Dir.chdir target_path[0]
-        target_path -= [target_path[0]]
+
+    exists = true
+
+    until target_path.length == 0 do
+      list = Dir.entries Dir.pwd
+        if list.include? target_path[0]
+          Dir.chdir target_path[0]
+          target_path -= [target_path[0]]
+        else
+          Dir.chdir current_path
+          exists = false
+          break
+        end
+        return exists
       end
     end
-  end
 
 end
