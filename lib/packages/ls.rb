@@ -1,4 +1,5 @@
 require "set"
+require_relative "display"
 require_relative "core"
 
 class Ls
@@ -8,16 +9,19 @@ class Ls
 
     if params.length == 0
       result = show_non_hidden
+      Core.print_result result
     else
       case params[0]
       when "-a"
         result = show_non_hidden.merge show_hidden
+        Core.print_result result
       else
-        result.add "#{self.name.downcase}: Unknown argument \'#{params[0]}\'"
+        error = "#{self.name.downcase}: Unknown argument \'#{params[0]}\'"
+        Display.print_error error
       end
     end
 
-    Core.print_result result
+    
   end
 
   def self.show_hidden

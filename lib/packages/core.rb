@@ -18,14 +18,15 @@ class Core
     end
   end
 
-  def self.unknown_param param
-
+  def self.unknown_param command, param
+    error = "#{command}: Unknown param \'#{param}\'"
+    Display.print_error error
   end
 
   def self.handle_commands command, params
-    if Object.const_defined?(command)
-      c = Object.const_get(command)
-      c.send(:main, params)
+    if Object.const_defined? command
+      c = Object.const_get command
+      c.send :main, params
     else
       error = "Command \'#{command.downcase}\' not found"
       Display.print_error error
