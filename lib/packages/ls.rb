@@ -16,12 +16,12 @@ class Ls
         result = show_non_hidden.merge show_hidden
         Core.print_result result
       else
-        error = "#{self.name.downcase}: Unknown argument \'#{params[0]}\'"
-        Display.print_error error
+        # error = "#{self.name.downcase}: Unknown argument \'#{params[0]}\'"
+        Core.unknown_param self.name.downcase, params[0]
       end
     end
 
-    
+
   end
 
   def self.show_hidden

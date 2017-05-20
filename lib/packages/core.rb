@@ -19,7 +19,7 @@ class Core
   end
 
   def self.unknown_param command, param
-    error = "#{command}: Unknown param \'#{param}\'"
+    error = "#{command}: Unknown parameter \'#{param}\'"
     Display.print_error error
   end
 
@@ -32,5 +32,5 @@ class Core
       Display.print_error error
     end
   end
-  
+
 end
