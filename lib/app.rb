@@ -11,7 +11,7 @@ def handle_commands(command, params)
 end
 
 def init_history(filename)
-  File.open(Dir.home+'/'+filename, "a+")
+  File.open(Dir.home + '/' + filename, "a+")
 end
 
 $hist_file = init_history('.srb_history')
