@@ -2,10 +2,10 @@ require_relative "require"
 require_all_packages
 
 def handle_commands(command, params)
-    c = Object.const_get(command)
-    c.send(:main, params)
-  rescue NameError => e
-    puts "Command \'#{command.downcase}\' not found"
+  c = Object.const_get(command)
+  c.send(:main, params)
+rescue NameError => e
+  puts "Command \'#{command.downcase}\' not found"
 end
 
 def init_history(filename)
