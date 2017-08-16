@@ -2,10 +2,10 @@ require_relative "require"
 require_all_packages
 
 def handle_commands(command, params)
-  if Object.const_defined?(command)
+  begin
     c = Object.const_get(command)
     c.send(:main, params)
-  else
+  rescue
     puts "Command \'#{command.downcase}\' not found"
   end
 end
