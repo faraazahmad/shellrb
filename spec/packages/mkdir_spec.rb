@@ -1,4 +1,4 @@
-require "packages/cd"
+require "packages/mkdir"
 
 describe Mkdir do
 
