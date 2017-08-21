@@ -9,5 +9,5 @@ def display_prompt
 end
 
 def get_user
-  (OS.windows? ? ENV["USERNAME"] : ENV["USER"]) + "@"
+  (OS.windows? ? ENV['USERNAME'] : ENV['USER']) + '@'
 end
