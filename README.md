@@ -12,20 +12,16 @@ Inspired from [ShellJS/Shx](https://github.com/shelljs/shx)
 ## Example
 Here's a sneak peek at how it feels to use ShellRB.
 ```
-SRB /> ls
-bin
-dev
-initrd.img
-lib64
-mnt
-root
-snap
-tmp
-vmlinuz
+faraaz@SRB: /home/faraaz> ls
+foo
+bar
+shellrb
 ...
 
-SRB /> cd home
-SRB /home>
+faraaz@SRB: /> cd home
+faraaz@SRB: /home>
+faraaz@SRB: /home/faraaz> pwd
+/home/faraaz
 
 ```
 
@@ -38,6 +34,8 @@ Enter ShellRB. The goal is to build a bash-like shell in Ruby that runs cross-pl
 Make sure you have Ruby and git installed (pretty obvious, right?)
 and do not forget the Bundler gem.
 #### On Linux/Mac OS
+(You can also do this exact thing if you have Git and Ruby installed on your machine)
+
 Clone the repository using git and cd into it.
 ```
 git clone https://github.com/faraazahmad/shellrb.git
@@ -55,9 +53,6 @@ ruby lib/app.rb
 ## Contributing
 The commands in ShellRB are made available using packages containing a class of their name. The packages can be found in "lib/packages/" directory. The packages in the directory are automatically ```require```ed in the app. When adding a package, make sure to also add tests for it, with the maximum code coverage. We believe in Behaviour Driven Development.
 
-## Cheat Sheet
-Currently, commands like ```cd```, ```ls``` etc. are packages built using classes, whose objects return a Ruby Set, which is then printed to the console. The following commands have a working class right now:
-* cd
-* ls
-* sys
-* core
+## Code of Conduct
+We highly appreciate good behaviour and kind treatment of others and the vice-versa. See our [Code of Conduct](CODE_OF_CONDUCT.md)
+
