@@ -1,5 +1,7 @@
 # ShellRB - Unix shell commands using Ruby
 
+![ShellRB](ShellRB.png)
+
 [![Build Status](https://travis-ci.org/faraazahmad/shellrb.svg?branch=master)](https://travis-ci.org/faraazahmad/shellrb)
 [![Join the chat at https://gitter.im/shellrb/Lobby](https://badges.gitter.im/shellrb/Lobby.svg)](https://gitter.im/shellrb/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 

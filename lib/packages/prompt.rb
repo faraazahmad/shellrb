@@ -1,11 +1,15 @@
 require 'colorized_string'
 require 'os'
 
+# Example prompt output:
+# user@SRB /home/user> 
+
 def display_prompt
-  print ColorizedString[display_user].colorize(:yellow)
-  print ColorizedString["SRB "].colorize(:yellow)
-  print ColorizedString["#{Dir.pwd}"].colorize(:blue)
-  print "> "
+  print ColorizedString[display_user].colorize(:light_green)
+  print ColorizedString['SRB'].colorize(:light_green)
+  print ': '
+  print ColorizedString["#{Dir.pwd}"].colorize(:light_blue)
+  print '> '
 end
 
 def display_user

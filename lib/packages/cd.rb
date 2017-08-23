@@ -1,8 +1,7 @@
-require "set"
-require_relative "core"
+require 'set'
+require_relative 'core'
 
 class Cd
-
   def self.main params
     path = params[0]
     if path.nil?
