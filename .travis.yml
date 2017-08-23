@@ -1,5 +1,6 @@
 language: ruby
 rvm:
+    - 2.3.0
     - 2.2.0
     - 2.1.0
     - 2.0.0
@@ -11,3 +12,9 @@ os:
     - linux
     - osx
     - windows
+
+notifications:
+    webhooks:
+        urls:
+            - https://webhooks.gitter.im/e/f7bca9192ed021143fea
+        on_success: change
