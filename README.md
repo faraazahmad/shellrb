@@ -54,5 +54,5 @@ ruby lib/app.rb
 The commands in ShellRB are made available using packages containing a class of their name. The packages can be found in "lib/packages/" directory. The packages in the directory are automatically ```require```ed in the app. When adding a package, make sure to also add tests for it, with the maximum code coverage. We believe in Behaviour Driven Development.
 
 ## Code of Conduct
-We highly appreciate good behaviour and kind treatment of others and the vice-versa. See our [Code of Conduct](CODE_OF_CONDUCT.md)
+We highly appreciate good behaviour and kind treatment of others. See our [Code of Conduct](CODE_OF_CONDUCT.md)
 
