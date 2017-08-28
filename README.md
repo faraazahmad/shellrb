@@ -31,10 +31,14 @@ I've been using Linux for my development environment ever since I jumped onto th
 Enter ShellRB. The goal is to build a bash-like shell in Ruby that runs cross-platform, is easy to maintain (has tests for every feature), and is friendly to new contributors.
 
 ## Installation
-Make sure you have Ruby and git installed (pretty obvious, right?)
-and do not forget the Bundler gem.
+Make sure you have Ruby and Git installed (pretty obvious, right?).
+
+You will also need the ```Rake``` gem. You can install that using
+```
+gem install rake
+```
 #### On Linux/Mac OS
-(You can also do this exact thing if you have Git and Ruby installed on your machine)
+(You can also do this exact thing on Windows if you have Git and Ruby installed on your machine)
 
 Clone the repository using git and cd into it.
 ```

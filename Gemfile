@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'rake'
+gem 'bundler'
 gem 'psych'
 gem 'colorize'
 gem 'os'
