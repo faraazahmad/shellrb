@@ -37,8 +37,8 @@ You will also need the ```Rake``` gem. You can install that using
 ```
 gem install rake
 ```
-#### On Linux/Mac OS
-(You can also do this exact thing on Windows if you have Git and Ruby installed on your machine)
+#### On Linux/Mac OS/Windows
+(On Mac OS, Ruby comes pre-installed, on Linux you can install it preferably using [RVM](https://rvm.io), and on Windows, you may have to install Git and Ruby using their respective installers.)
 
 Clone the repository using git and cd into it.
 ```
@@ -47,11 +47,23 @@ cd shellrb/
 ```
 Install the required gems using bundler
 ```
-bundle install
+rake install
 ```
 ShellRB is now installed. You can now run it using
 ```
-ruby lib/app.rb
+rake run
+```
+
+## Updating the gems
+To update the gems that ShellRB depends upon, just run
+```
+rake update
+```
+
+## Updating ShellRB
+To get the latest build of ShellRB, (you may have guessed it), simply run
+```
+rake upgrade
 ```
 
 ## Contributing
