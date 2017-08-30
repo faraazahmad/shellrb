@@ -1,4 +1,3 @@
-require 'set'
 require_relative 'core'
 require 'os'
 
