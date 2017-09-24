@@ -23,6 +23,7 @@ class Ls
       end
     end
 
+    # Use the Core class of ShellRB to print result
     Core.print_result result
   end
 
