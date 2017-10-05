@@ -6,13 +6,17 @@ describe Cat do
 
     context "given existing file" do
       it "prints the text in the file" do
-        expect(Cat.main('cat_test/file.txt')).to eql(Kernel.system 'cat cat_test/file.txt')
+        f = File.open('file.txt', 'w')
+        f.write("Hello World!")
+        f.close
+        expect(Cat.main("file.txt")).to eql(puts `cat file.txt`)
+        `rm file.txt`
       end
     end
 
     context "given non-existing file" do
       it "prints error message" do
-        expect(Cat.main('text.txt')).to eql(Kernel.system 'cat text.txt')
+        expect(Cat.main('text.txt')).to eql(puts `cat text.txt`)
       end
     end
 
