@@ -12,7 +12,7 @@ class Cat
     file.close
   # this rescue block catches an exception, presumably by the user passing a missing file as an argument
   # the text that it puts tells the user that no such file is found, emulates the same error message given by bash
-  rescue Exception => e
-    puts "cat: #{params[0]}: No such file or directory" 
+rescue
+    puts "cat: #{params[0]}: No such file or directory"
   end
 end
