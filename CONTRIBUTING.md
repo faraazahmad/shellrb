@@ -92,6 +92,8 @@ describe Cd do
 end
 ```
 
+More info can be found in their [documentation](https://relishapp.com/rspec)
+
 ## What to commit?
 Typically, if you're adding a new class for a command not yet implemented, you should have the class file for package and the corresponding test.
 
