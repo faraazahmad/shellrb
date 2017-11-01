@@ -12,4 +12,4 @@ script:
 
 os:
     - linux
-    - osx
+    - macos
