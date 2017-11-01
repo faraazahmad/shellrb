@@ -2,17 +2,19 @@
 # TODO: add options/flags
 class Cat
   def self.main params
-    # opens the file passes as a parameter for reading
-    file = File.new(params[0], 'r')
-    # iterates through every line in the file and puts it to the console
-    while (line = file.gets)
-      puts "#{line}"
+    # read the file whose name has been passed as the parameter, line-by-line
+    File.foreach(params[0]) do |line|
+      puts line
     end
-    # closes the file
-    file.close
-  # this rescue block catches an exception, presumably by the user passing a missing file as an argument
-  # the text that it puts tells the user that no such file is found, emulates the same error message given by bash
-  rescue Exception => e
-    puts "cat: #{params[0]}: No such file or directory" 
+
+    rescue
+      # this rescue block catches an exception, presumably by the user passing a
+      # missing file or a directory as an argument
+      if File.directory?(params[0])
+        error = "Is a directory"
+      else
+        error = "No such file or directory"
+      end
+      puts "cat: #{params[0]}: #{error}"
   end
 end
