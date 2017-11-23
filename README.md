@@ -34,9 +34,9 @@ Enter ShellRB. The goal is to build a Bash-like shell in Ruby that runs cross-pl
 ### Prerequisites
 1. Make sure you have **Ruby** and **Git** installed (pretty obvious, right?).
 
-  On macOS, Ruby comes pre-installed, on Linux you can install it preferably using [RVM](https://rvm.io), and on Windows, you may have to install Git and Ruby using their respective installers.
+  On macOS, Ruby comes pre-installed, on Linux you can install it preferably using [RVM](https://rvm.io), and on Windows, you may have to install Git and Ruby using their installers from [here](https://git-scm.com/download/win) and [here](https://rubyinstaller.org/) respectively.
 
-1. You will also need the **`rake` gem**. You can install that using:
+2. Once you have the above installed, you will also need to install the **`rake` gem**. You can install that using:
   ```
   gem install rake
   ```
@@ -47,7 +47,7 @@ Enter ShellRB. The goal is to build a Bash-like shell in Ruby that runs cross-pl
   git clone https://github.com/faraazahmad/shellrb.git
   cd shellrb
   ```
-1. Install the required gems:
+2. Install the required gems:
   ```
   rake install
   ```
