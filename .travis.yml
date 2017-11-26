@@ -1,6 +1,6 @@
 language: ruby
 before_install:
-    - rvm install 2.4
+    - chmod +x ./spec/
 rvm:
     - 2.4
     - 2.3
@@ -9,7 +9,6 @@ rvm:
     - 2.0
 script:
     - bundle exec rspec
-
 os:
     - linux
     - macos
