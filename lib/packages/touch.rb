@@ -16,9 +16,13 @@ class Touch
     file_present = false
     
     # iterates through the files in the current directory to make sure that the desired file does not exist
-    ls.each do |x|
-      if x.include? new_file
-        file_present = true
+    # note that ls is a set of two sets, so we have to iterate through both sub-sets (see line 21)
+    ls.each do |set|
+      set.each do |x|
+        if x == new_file
+          file_present = true
+          break
+        end
       end  
     end
 
