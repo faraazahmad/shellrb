@@ -8,20 +8,18 @@ rescue NameError
   puts "Command \'#{command.downcase}\' not found"
 end
 
-def init_history(filename)
-  File.open(Dir.home + '/' + filename, 'a+')
-end
-
-$hist_file = init_history('.srb_history')
+Core.init_history
 loop do
   begin
+    # Display the prompt and get command from user
     display_prompt
-    raw_input = gets
-    handle_commands(:Exit, nil) if raw_input.nil?
-    $hist_file.puts raw_input
+    raw_input = gets.chomp
 
-    input = raw_input.gsub("\n", "").split(" ")
-    if input[0] != ""
+    unless raw_input.empty?
+      # If command was not empty, log it in .srb_history
+      Core.log_history raw_input
+      
+      input = raw_input.split(' ')
       command = input[0].capitalize.to_sym
       params = input[1..input.length]
       handle_commands(command, params)

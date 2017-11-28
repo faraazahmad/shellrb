@@ -15,6 +15,7 @@ class Pwd
 
     # Use the Core class of ShellRB to print result
     Core.print_result result
+    result
   end
 
   def self.no_params

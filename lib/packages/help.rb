@@ -12,16 +12,17 @@ class Help
 
     # Assuming no params have been sent
 
-    result.merge self.no_params
+    result.merge no_params
 
     puts 'These commands are defined in lib/packages. Type \'help\' to see this list '
     # Use the Core class of ShellRB to print result
     Core.print_result result
+    result
   end
 
   def self.no_params
     simple_result = Set.new
-    entries = Dir.entries('lib/packages')
+    entries = Dir.entries("#{File.dirname(__FILE__)}")
     
     entries.each do |entry|
       simple_result.add(entry[0..-4]) if entry[-3..-1] == '.rb'
