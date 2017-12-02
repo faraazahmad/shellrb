@@ -1,6 +1,6 @@
 language: ruby
 before_install:
-    - chmod u=rwx -R ./
+    - sudo chmod u=rwx -R ./
 rvm:
     - 2.4
     - 2.3
