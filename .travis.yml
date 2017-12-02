@@ -1,6 +1,6 @@
 language: ruby
 before_install:
-    - chmod +x './*'
+    - chmod +x ./
 rvm:
     - 2.4
     - 2.3
