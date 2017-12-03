@@ -20,13 +20,12 @@ class Mkdir
       end
     end
 
-    # creates the directory if it does not exist already
-    # NOTE: I thought about showing an error message if the directory already exists, but the original touch command does not do this.
-    # That can be added easily if deemed necessary.
-    unless directory_present
-      Dir.mkdir(new_directory)
-    else
+    # creates the directory if it does not exist already, throws an error if the directory does exist
+
+    if directory_present
       puts "mkdir: #{new_directory}: File exists"
+    else
+      Dir.mkdir(new_directory)
     end
 
   end
