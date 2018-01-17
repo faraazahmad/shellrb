@@ -9,7 +9,7 @@ def display_prompt
   print ColorizedString['SRB'].colorize(:light_green)
   print ': '
   print ColorizedString["#{Dir.pwd}"].colorize(:light_blue)
-  print '> '
+  print "\n> "
 end
 
 def display_user
