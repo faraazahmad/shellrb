@@ -14,7 +14,7 @@ describe Mkdir do
 
     context "given existing directory" do
       it "does not create the directory" do
-        Dir.mkdir("directorytest")
+        FileUtils.mkdir("directorytest")
         expect(Mkdir.main(["directorytest"])).to eql(puts "mkdir: directorytest: File exists")
         Dir.delete("directorytest")
       end

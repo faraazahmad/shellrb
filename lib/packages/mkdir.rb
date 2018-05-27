@@ -25,7 +25,7 @@ class Mkdir
     if directory_present
       puts "mkdir: #{new_directory}: File exists"
     else
-      Dir.mkdir(new_directory)
+      FileUtils.mkdir(new_directory)
     end
 
   end
