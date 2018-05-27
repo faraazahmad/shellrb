@@ -1,6 +1,5 @@
 # Contributing
-
-I appreciate pull requests from everyone. Having this contributing guide makes sure the repo has consistent code styles throughout and also to help out new contributers.
+I like getting contributions from everyone. Having this contributing guide makes sure the repo has consistent code styles throughout and also to help out new contributers.
 
 ## Directory Structure
 The repo is currently setup so that it is easy to add your code and the corresponding tests.
@@ -52,6 +51,16 @@ end
 ```
 this package file is called, (quite simply) `pwd.rb` and its test file, `pwd_spec.rb` will be placed inside `spec/packages`.
 
+# Code Style Guide
+The code style guide is an important guide for contributors in any project.
+ShellRB will now be following the community driven Ruby coding style guide.
+You can check it out [here](https://github.com/bbatsov/ruby-style-guide). 
+
+Any previous code that was written will be converted to this style guide.
+
+## Reporting style violations
+You can report any code style violations by opening an issue with the label `code-style`.
+
 ## Test files
 ##### "What do I test?"
 Divide your package's functionality into parts that do specific tasks, as methods of their class. Then individually test those methods, and then finally test the `main` method of the class. Here's an example of the tests for the `cd` command: 
@@ -99,5 +108,5 @@ Typically, if you're adding a new class for a command not yet implemented, you s
 
 If you're adding a new feature to an existing package, tread carefully. First write failing tests for your feature, and then write code to make it pass. Test often, and test everything.
 
-### You think you can improve the source and provide best practices that ShellRB doesn't follow yet?
+## You think you can improve the source and provide best practices that ShellRB doesn't follow yet?
 Great! Open up an issue and explain it. Your contributions are most welcome!
