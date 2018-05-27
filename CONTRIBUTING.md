@@ -22,7 +22,7 @@ The repo is currently setup so that it is easy to add your code and the correspo
         ├── ...
 ```
 All commands in ShellRB are implemented as Ruby classes that live inside the folder `lib/packages` and their corresponding tests are in `spec/packages`. For example, if you have a package implementing the `pwd` command, it is a fairly simple Ruby class as follows: 
-```
+```Ruby
 require 'set'
 require_relative 'core'
 
@@ -51,20 +51,18 @@ end
 ```
 this package file is called, (quite simply) `pwd.rb` and its test file, `pwd_spec.rb` will be placed inside `spec/packages`.
 
-# Code Style Guide
+## Code Style Guide
 The code style guide is an important guide for contributors in any project.
 ShellRB will now be following the community driven Ruby coding style guide.
 You can check it out [here](https://github.com/bbatsov/ruby-style-guide). 
 
 Any previous code that was written will be converted to this style guide.
-
-## Reporting style violations
-You can report any code style violations by opening an issue with the label `code-style`.
+You can report any code style violations by opening an issue with the label `code-style-violation`.
 
 ## Test files
 ##### "What do I test?"
 Divide your package's functionality into parts that do specific tasks, as methods of their class. Then individually test those methods, and then finally test the `main` method of the class. Here's an example of the tests for the `cd` command: 
-```
+```Ruby
 require "packages/cd"
 
 describe Cd do
