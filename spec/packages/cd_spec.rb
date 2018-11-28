@@ -2,6 +2,10 @@ require "packages/cd"
 
 describe Cd do
 
+  before :all do
+    @old_path = Dir.pwd
+  end
+  
   describe ".main" do
     context "given existing directory" do
       it "CDs into the directory" do
@@ -14,9 +18,8 @@ describe Cd do
   describe ".main" do
     context "given non-existent directory" do
       it "does not change directory" do
-        old_path = Dir.pwd
         Cd.main(["does-not-exist"])
-        expect(Dir.pwd).to eql(old_path)
+        expect(Dir.pwd).to eql(@old_path)
       end
     end
   end
@@ -24,11 +27,14 @@ describe Cd do
   describe ".main" do
     context "given a file" do
       it "does not change directory" do
-        old_path = Dir.pwd
         Cd.main(["lib/packages/cd.rb"])
-        expect(Dir.pwd).to eql(old_path)
+        expect(Dir.pwd).to eql(@old_path)
       end
     end
+  end
+
+  after :each do
+    Cd.main([@old_path])
   end
 
 end
