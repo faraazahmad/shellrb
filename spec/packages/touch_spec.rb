@@ -15,7 +15,7 @@ describe Touch do
     context "given existing file" do
       it "does nothing" do
         File.write("touch.test", "")
-        expect(Touch.main("touch.test")).to eql(puts "")
+        expect(Touch.main(["touch.test"])).to eql(puts "")
         `rm touch.test`
       end
     end
