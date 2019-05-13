@@ -1,7 +1,5 @@
 #Simple implementation of unix copy command cp
-require_relative 'ls'
 require 'fileutils'
-require 'set'
 
 class Cp
   def self.main params
