@@ -2,16 +2,38 @@
 require 'fileutils'
 
 class Cp
+  def self.usage
+    puts "usage: \tcp source_file target_file"
+    puts "\tcp source_file ... target_directory"	
+  end
   def self.main params
     begin
-      src = params[0]
-      dest = params[1]
-      if src.to_s.empty? || dest.to_s.empty?
-      	puts "usage: \tcp source_file target_file"
-      	puts "\tcp source_file ... target_directory"
+      if params.length == 2
+        src = params[0]
+        dest = params[1]
+        if src.to_s.empty? || dest.to_s.empty?
+          usage()     	  
+      	  return 
+        end
+        FileUtils.cp(src, dest)
+      elsif params.length == 3
+        #Recursive copying
+        if params[0].eql? "-r"
+      	  src = params[1]
+      	  dest = params[2]
+      	  if src.to_s.empty? || dest.to_s.empty?
+      	    usage()
+      	    return
+      	  end
+      	  FileUtils.cp_r(src, dest)
+        else
+          usage()
+          return
+        end
+      else
+      	usage()
       	return 
-      end
-      FileUtils.cp(src, dest)
+      end  
     rescue StandardError => e
       puts e.message
     end
