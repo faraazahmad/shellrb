@@ -3,8 +3,8 @@ require 'fileutils'
 
 class Cp
   def self.usage
-    puts "usage: \tcp source_file target_file"
-    puts "\tcp source_file ... target_directory"	
+    puts "usage: \tcp [-r] source_file target_file"
+    puts "\tcp [-r] source_file ... target_directory"	
   end
   def self.main params
     begin
