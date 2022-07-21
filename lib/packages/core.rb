@@ -1,3 +1,4 @@
+# core shell
 class Core
 
   def self.main params
@@ -17,7 +18,7 @@ class Core
 
   def self.print_result result
     result.each do |value|
-      print "#{value}    "
+      print value.to_s
     end
     puts ''
   end
