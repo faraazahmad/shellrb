@@ -17,5 +17,15 @@ describe Cat do
       end
     end
 
+    context "given multiple existing files" do
+      it "prints the text in the file" do
+        File.write("first.txt", "Hello World!")
+        File.write("second.txt", "Goodbye World!")
+        expect(Cat.main("first.txt", "second.txt")).to eql(puts `cat first.txt second.txt`)
+        `rm first.txt`
+        `rm second.txt`
+      end
+    end
+
   end
 end

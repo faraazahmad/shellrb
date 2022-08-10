@@ -3,8 +3,10 @@
 class Cat
   def self.main params
     # read the file whose name has been passed as the parameter, line-by-line
-    File.foreach(params[0]) do |line|
-      puts line
+    params.each do |p|
+      File.foreach(p) do |line|
+        puts line
+      end
     end
 
     rescue
