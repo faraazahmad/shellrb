@@ -7,7 +7,7 @@ describe Touch do
       it "creates the file" do
         Touch.main(["touch.test"])
         
-        expect(File.exists?("touch.test")).to eql(true)
+        expect(File.exist?("touch.test")).to eql(true)
         `rm touch.test`
       end
     end
