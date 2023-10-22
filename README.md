@@ -5,7 +5,9 @@
 [![Build Status](https://travis-ci.org/faraazahmad/shellrb.svg?branch=master)](https://travis-ci.org/faraazahmad/shellrb)
 [![Join the chat at https://gitter.im/shellrb/Lobby](https://badges.gitter.im/shellrb/Lobby.svg)](https://gitter.im/shellrb/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-ShellRB is a portable **(Windows / Linux / macOS)** implementation of Unix shell commands on top of the Ruby's modules. You can use it to eliminate your shell script's dependency on Unix, while still keeping its familiar and powerful commands.
+ShellRB is a portable **(Windows / Linux / macOS)** implementation of Unix shell commands on top of the Ruby's modules. It is a command-line interface (CLI) toolkit written in Ruby, designed to simplify and improve your experience with interacting with command-line tools and processes. You can use it to eliminate your shell script's dependency on Unix, while still keeping its familiar and powerful commands.
+
+Also, This toolkit provides a wide range of functionality, including command parsing, argument validation, option parsing, subcommand management, and more. It also provides a simple and intuitive way to create complex command-line interfaces for your Ruby applications. In this repository, you'll find all the necessary documentation, examples, and source code to install and use ShellRB.
 
 Inspired from [ShellJS/Shx](https://github.com/shelljs/shx).
 
